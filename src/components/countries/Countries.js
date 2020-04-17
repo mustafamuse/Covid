@@ -4,8 +4,8 @@ import styles from "./Countries.module.css"
 import { fetchCountries } from '../../api';
 
 
-const Countries = () =>  {
-
+const Countries = ({props}) =>  {
+//                ^^ the props i sent down
     const [fetchedCountries, setFetchedCountries] = useState([]);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const Countries = () =>  {
         <div>
             <h1>Countries </h1>
             <FormControl style={styles.FormControl}>
-                <NativeSelect>
+                <NativeSelect defaultValue="" onChange={(e) => {props.handleCountryChange(e.target.value)}}>
                     <option value="global">Global</option>
                     {fetchedCountries.map((country, index) => <option value={country} key={index}>{country}</option>)}
                 </NativeSelect>

@@ -11,9 +11,16 @@ class App extends React.Component {
 
     this.state = {
       data: {},
+      country: '',
     }
   }
 
+  handleCountryChange = async (country) =>{
+    // console.log(country)
+    this.setState({
+      country: country
+    })
+  }
 
   // i put the async in front of the componentDidMount, to make it asynchronous 
   async componentDidMount() {
@@ -27,7 +34,7 @@ class App extends React.Component {
       <div className={styles.container}>
         <h1>APP level</h1>
         <Cards data={data} />
-        <Countries />
+        <Countries handleCountryChange={this.handleCountryChange}/>
         <Charts />
       </div>
     )
