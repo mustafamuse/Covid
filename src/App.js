@@ -1,9 +1,10 @@
 import React from 'react';
-import { fetchData } from "./api/index"
+import { fetchData } from "./api/covidApi"
 import Cards from './components/cards/Cards'
 import Charts from './components/charts/Charts';
 import Countries from './components/countries/Countries';
 import styles from "./App.module.css"
+
 
 class App extends React.Component {
   constructor(props) {
@@ -35,7 +36,8 @@ class App extends React.Component {
     const { data,country} = this.state;
     return (
       <div className={styles.container}>
-        <h1>APP level</h1>
+        <h1>Latest on Covid-19</h1>
+        <img src="coronavirus.png" width="500"  alt ="Covid-19"/>
         <Cards data={data} />
         <Countries handleCountryChange={this.handleCountryChange}/>
         <Charts data={data} country={country}/>

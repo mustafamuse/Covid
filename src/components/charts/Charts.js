@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { fetchDailyData } from "../../api"
+import { fetchDailyData } from "../../api/covidApi"
 import { Line, Bar } from "react-chartjs-2"
 import styles from "./Charts.module.css"
-const Charts = ({data, country}) => {
+
+
+const Charts = ({ data, country }) => {
+
     const [dailyData, setDailyData] = useState([])
 
     useEffect(() => {
@@ -47,10 +50,7 @@ const Charts = ({data, country}) => {
                             text: `Current situation in ${country}`
                         }
                     }} />
-
             )
-
-
             : null
     )
 
