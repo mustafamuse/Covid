@@ -2,6 +2,7 @@ import React from 'react';
 import { fetchData } from "./api/index"
 import Cards from './components/cards/Cards'
 import Charts from './components/charts/Charts';
+import Countries from './components/countries/Countries';
 import styles from "./App.module.css"
 
 class App extends React.Component {
@@ -10,7 +11,6 @@ class App extends React.Component {
 
     this.state = {
       data: {},
-
     }
   }
 
@@ -27,6 +27,7 @@ class App extends React.Component {
       <div className={styles.container}>
         <h1>APP level</h1>
         <Cards data={data} />
+        <Countries />
         <Charts />
       </div>
     )
