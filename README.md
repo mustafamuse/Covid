@@ -21,7 +21,7 @@ to chart all the global data for the recovered, infected and mortality rates of 
 I created this app utilizing the Covid-19 API and ChartsJS with the implementation of React hooks such as: UseEffect and UseState, to create both Line and Bar Charts.
 
 
-<a href="https://github.com/umpp101/Covid"><img src="https://github.com/umpp101/Covid/blob/master/public/app-gif.png" alt="Covid" width="700px"></a>
+<a href="https://github.com/umpp101/Covid"><img src="https://github.com/umpp101/Covid/blob/master/public/app-gif.gif" alt="Covid" width="700px"></a>
 ## Features
 - Users are allowed to display data for their countries ✅
 - Display Country data on a bar chart ✅
