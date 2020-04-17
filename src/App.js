@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { fetchData } from "./api/index"
-
+import Cards from './components/Cards/Cards'
 
 class App extends React.Component {
   constructor(props) {
@@ -21,9 +21,11 @@ class App extends React.Component {
     this.setState({data: fetchedData})
   }
   render() {
+    const {data} = this.state;
     return (
       <div>
         <h1>Hey</h1>
+        <Cards data={data} />
       </div>
     )
   }
