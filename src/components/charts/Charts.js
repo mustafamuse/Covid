@@ -20,8 +20,8 @@ const Charts = () => {
             // deconstruct the date, map and return an array
             labels: dailyData.map(({ date }) => date),
             // api doesn't have daily recovered data, it just has the daily infected and daily deaths only
-            datasets: [{ data: dailyData.map(({ confirmed }) => confirmed), labeled: "Infected", borderColor: "#3333ff", fill: true }, 
-                       { data: dailyData.map(({ deaths }) => deaths), labeled: "Deaths", borderColor: "red", fill: true, backgroundColor: "red"}],
+            datasets: [{ data: dailyData.map(({ confirmed }) => confirmed), label: "Infected", borderColor: "#3333ff", fill: true }, 
+                       { data: dailyData.map(({ deaths }) => deaths), label: "Deaths", borderColor: "red", fill: true, backgroundColor: "red"}],
         }}
         />)
         : null
