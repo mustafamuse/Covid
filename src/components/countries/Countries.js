@@ -4,8 +4,7 @@ import styles from "./Countries.module.css"
 import { fetchCountries } from '../../api';
 
 
-const Countries = ({props}) =>  {
-//                ^^ the props i sent down
+const Countries = (props) =>  {
     const [fetchedCountries, setFetchedCountries] = useState([]);
 
     useEffect(() => {
@@ -17,7 +16,7 @@ const Countries = ({props}) =>  {
         fetchApi();
     },[setFetchedCountries]); //this will update the state
 
-    console.log(fetchedCountries)
+    // console.log(fetchedCountries)
 
     return (
         <div>
