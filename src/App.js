@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { fetchData } from "./api/index"
-import Cards from './components/cards/Cards'
+import Cards from './components/Cards/Cards'
 
 class App extends React.Component {
   constructor(props) {
