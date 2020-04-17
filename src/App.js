@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
 import { fetchData } from "./api/index"
 import Cards from './components/cards/Cards'
 import Charts from './components/charts/Charts';
+import styles from "./App.module.css"
 
 class App extends React.Component {
   constructor(props) {
@@ -24,8 +24,8 @@ class App extends React.Component {
   render() {
     const {data} = this.state;
     return (
-      <div>
-        <h1>Hey</h1>
+      <div className={styles.container}>
+        <h1>APP level</h1>
         <Cards data={data} />
         <Charts />
       </div>
