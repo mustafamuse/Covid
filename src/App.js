@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import { fetchData } from "./api/index"
-import Cards from './components/Cards/Cards'
+import Cards from './components/cards/Cards'
+import Charts from './components/charts/Charts';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class App extends React.Component {
       <div>
         <h1>Hey</h1>
         <Cards data={data} />
+        <Charts />
       </div>
     )
   }
