@@ -15,19 +15,22 @@ class App extends React.Component {
     }
   }
 
-  handleCountryChange = async (country) =>{
-    // console.log(country)
-    this.setState({
-      country: country
-    })
-  }
-
+  
   // i put the async in front of the componentDidMount, to make it asynchronous 
   async componentDidMount() {
     const fetchedData = await fetchData();
     console.log(fetchedData)
     this.setState({data: fetchedData})
   }
+
+
+  handleCountryChange = async (country) =>{
+    const fetchedData = await fetchData(country);
+    // console.log(country)
+    this.setState({data: fetchedData, country: country})
+  }
+
+
   render() {
     const {data} = this.state;
     return (

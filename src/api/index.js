@@ -2,10 +2,16 @@ import axios from "axios";
 
 const url = "https://covid19.mathdro.id/api";
 
-export const fetchData = async () => {
+export const fetchData = async (county) => {
+    let changeUrl = url;
+
+    if(country) {
+        changeUrl = `${url}/countries/${country}`
+    }
     try {
         // i deconstructed the data api obj to get only the keys i wanted and then assigned those to the modified data object that i created
-        const { data: {confirmed, recovered, deaths, lastUpdate} } = await axios.get(url);
+        const { data: {confirmed, recovered, deaths, lastUpdate} } = await axios.get(changeUrl);
+
         const modifiedData = {confirmed, recovered , deaths, lastUpdate}
         console.log("fetched APIDATA :", modifiedData)
         return modifiedData;
